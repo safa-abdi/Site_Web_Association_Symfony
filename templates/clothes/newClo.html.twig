@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}clothes{% endblock %}
+
+{% block body %}
+<style>
+  h1{ font-size:60px;}
+</style>
+    <h1  style="color:#5F9EA0;text-align:center;">Promise of donnate clothes</h1><br>
+
+    {{ include('clothes/_form.html.twig') }}
+
+{% endblock %}

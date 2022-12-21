@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+<style>
+  h1{ font-size:60px;}
+</style>
+    &nbsp;<h1  style="color:white;text-align:center;color:#87CEEB;">Contactez nous</h1><br>
+<hr>
+    {{ include('contact/_form.html.twig') }}
+
+{% endblock %}

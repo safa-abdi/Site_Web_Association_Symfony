@@ -1,0 +1,140 @@
+{% extends 'base.html.twig'%}
+ {% block title%}Acceuil{% endblock %}
+ {% block body %}
+ <style>
+  h1{ font-size:80px;}
+  h2{font-size:40px;color:black;}
+  h3{font-size:30px;color:#DAA520;}
+  h4,h6{color:black;}
+  head{background-color:#47d1d1;}
+}
+.center{
+  display:block;
+  margin:auto;
+}
+</style>
+   			 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          			 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      <h1  style="color: #8c8c8c;size:100px;" align="center" >
+          Dream
+      </h1><br>
+      <h2 align="center" style="color:#8c8c8c" class="text-primary">Association for the poor children of tunisia</h2>
+    <div class="clear"></div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <table width="100%">
+  <tr>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td>
+<div class="card border-primary mb-3" style="max-width: 40rem;">
+   <div class="card-header text-secondary ">They need to be happy</div>
+    <div class="card-body">
+    <img src="{{asset('build/images/im1.jpg')}}" width="370" heigth="300"/>
+  </div>
+  </div>
+  </td>
+   <td>
+<div class="card border-primary mb-3" style="max-width: 40rem;">
+    <div class="card-header text-primary">They need to eat healthy food</div>
+  <div class="card-body">
+    <img src="{{asset('build/images/i8.jpg')}}" width="370" heigth="300"/>
+  </div>
+  </div>
+  </td>
+    <td>
+<div class="card border-primary mb-3" style="max-width: 40rem;">
+    <div class="card-header text-secondary">They need to study</div>
+  <div class="card-body">
+    <img src="{{asset('build/images/i11.png')}}" width="370" heigth="300"/>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+
+
+    <table class="table" >
+  <thead>
+    <tr>
+      <th scope="col" font-size="40px" style="text-align:center"><h3 align="center">love them </h3><br> <img src="{{asset('build/images/b_icon2.png')}}" />
+</th>
+      <th scope="col" style="text-align:center">
+      <h3 >Join
+         volunteer</h3> <br><img src="{{asset('build/images/b_icon1.png')}}"></th>
+      <th scope="col" style="text-align:center">
+      <h3 align="center">Help Them </h3><br><img src="{{asset('build/images/b_icon3.png')}}"</th>
+    </tr>
+  </thead>
+</table>
+        <br><h2 align="center">together we can change many child life</h2>
+ <h2 align="center">So join us and make the word more happy</h2><br>
+ <br>
+<h2 align="center" style="color: #8c8c8c;size:300px;" class="text-primary">Our evenements this month</h2><br>
+<br>
+            <table class="table table-hover">
+    <tr >
+    <br>&nbsp;
+    {% for nm in event %}
+      <td>
+      <div class="card text-white bg-secondary mb-3">
+         <div class="card-header">
+      <h4 class="mb-1" style="color: white">{{ nm.date|date("d/m/Y") }} </h4>
+      <p style="text-align:right">à {{ nm.lieu }}</p>
+    </div>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h4 class="mb-4">{{ nm.Type }}</h4>
+      <small class="text-muted"></small>
+    </div>
+  </a>
+</div>
+ {% endfor %}
+ </td>
+    </tr>
+
+  </table>
+
+
+<h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        
+			 
+			 &nbsp; &nbsp;</h1>
+   <h2 align="center" style="color:#8c8c8c" class="text-primary">If you want to promise to donnate chose one of these</h2><br>
+  <table width="100%" >
+  <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			 
+			</h1><hr>
+  <tr >
+   <td ><a href="{{ path('money_new')}}" class="btn btn-outline-success btn-lg btn-block">Donnate Money</a></td>
+   <td><a href="{{ path('nourriture_new')}}" class="btn btn-outline-danger btn-lg btn-block">Donnate nourriture</a></td>
+   <td><a href="{{ path('clothes_new')}}" class="btn btn-outline-primary btn-lg btn-block">Donnate Clothes</a></td>
+   <td><a href="{{ path('electro_new')}}" class="btn btn-outline-secondary btn-lg btn-block" >Donnate home appliance</a></td>
+
+</tr>
+</table>
+<br>
+<br>
+<br>
+   <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			 
+			 
+			 
+    <div class="clear"></div>
+  </div>  
+</footer>
+<a href="#" id="toTop" class="fa fa-angle-up"></a>
+
+
+
+
+{% endblock %}
+
+ 
+     

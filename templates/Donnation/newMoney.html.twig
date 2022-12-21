@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}money{% endblock %}
+
+{% block body %}
+<style>
+  h1{ font-size:60px;}
+</style>
+    <h1 class="text-secondary" style="color:white;text-align:center;color:#C0C0C0;">Promise of donnate money</h1><br>
+
+    {{ include('Donnation/_form.html.twig') }}
+
+{% endblock %}

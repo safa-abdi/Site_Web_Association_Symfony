@@ -1,0 +1,41 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{{ form_start(form, {'attr': {'class': 'row'}}) }}
+ <section class="ftco-section ftco-no-pt ftco-no-pb">
+          <div class="container">
+            <div class="row d-flex">
+              <div class="col-md-5 ftco-animate img img-5" style="background-image: url('{{asset('build/images/i5.png')}}');"></div>
+              <div class="col-md-7 ftco-animate makereservation p-4 p-md-5">
+                <div class="heading-section ftco-animate mb-5">
+                </div>
+ <form>
+ <div class="row">
+	<div class="col-md-6">
+         <div class="form-group">
+		{{ form_label(form.sender) }}
+		{{ form_widget(form.sender, {'attr': {'placeholder': 'saisir votre nom '}}) }}
+	    </div>
+	</div>
+	 <div class="col-md-6">
+         <div class="form-group">
+	    {{ form_label(form.phone_number) }}
+        {{ form_widget(form.phone_number) }}
+    	</div>
+	</div>
+	 <div class="col-md-12">
+         <div class="form-group">
+	    {{ form_label(form.helps) }}
+		{{ form_widget(form.helps,{'attr': {'placeholder': ' '}}) }}
+    	</div>
+	</div>
+	</div>
+	 <div class="col-md-12 mt-3">
+           <div class="form-group">
+		    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		    <input type="submit" name="" value="Envoyer" class="btn btn-danger btn-lg">
+		   &nbsp;&nbsp;<input type="reset" name="" value="reset" class="btn btn-secondary btn-lg">
+	 </div>
+</div>
+</div>
+</div>
+{{ form_end(form) }}
